@@ -1,4 +1,6 @@
-[
+import json
+
+new_products = [
   {
     "qrCode": "item-1",
     "name": "Samsung Galaxy M34 5G (Prism Silver, 6GB RAM, 128GB Storage)",
@@ -174,3 +176,8 @@
     ]
   }
 ]
+
+with open('mock_store_data.json', 'w') as f:
+    json.dump(new_products, f, indent=2)
+
+print("Database updated!")
